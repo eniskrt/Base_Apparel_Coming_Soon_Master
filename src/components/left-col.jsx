@@ -53,11 +53,11 @@ const LeftCol = () => {
                     />
                 <Form.Control.Feedback type='invalid' className='feedback'>
                     {formik.errors.email}
-                    <Image src={errorLogo}/>
+                    <Image src={errorLogo} alt='error-icon'/>
                 </Form.Control.Feedback>
             </Form.Group>
             <Button type='submit'>
-                <IoIosArrowForward />
+                 <IoIosArrowForward />
             </Button>
         </Form>
       </Container>
