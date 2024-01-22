@@ -1,0 +1,41 @@
+@media(min-width:768px){
+    .responsive-banner{
+        display: none;
+    }
+}
+
+@media(max-width:768px){
+    .left-col{
+        margin: 0!important;
+        padding: 0!important;
+        text-align: center;
+    }
+    .logo{
+        margin: 2rem 3rem!important;
+    }
+    .responsive-banner{
+        width: 100%;
+        height: auto;
+        margin-bottom: 3rem;
+    }
+    img.right-banner{
+        display: none;
+    }
+    h1{
+        letter-spacing: 15px!important;
+        font-size: 3rem!important;
+    }
+    form{
+        padding: 2rem!important;
+        margin-top: 0!important;
+    }
+    button{
+        right: 10px!important;
+    }
+    .feedback{
+        text-align: left;
+    }
+    .feedback img{
+        right: 140px!important;
+    }
+}

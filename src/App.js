@@ -2,6 +2,7 @@ import { Container, Row } from "react-bootstrap";
 import LeftCol from "./components/left-col";
 import RightCol from "./components/right-col";
 import "./components/style.scss"
+import "./responsive.css"
 
 
 function App() {

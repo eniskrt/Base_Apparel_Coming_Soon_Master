@@ -2,6 +2,8 @@ import React from 'react'
 import { Button, Col, Container, Form, Image } from 'react-bootstrap'
 import { IoIosArrowForward } from "react-icons/io";
 import logo from "../img/logo.svg"
+import errorLogo from "../img/icon-error.svg"
+import responsiveBanner from "../img/hero-mobile.jpg"
 import * as Yup from "yup"
 import { useFormik } from 'formik';
 
@@ -32,6 +34,7 @@ const LeftCol = () => {
     <Col md={7} className='left-col'>
       <Container>
         <Image src={logo} alt='logo' className='logo'/>
+        <Image src={responsiveBanner} alt='banner-responsive' className='responsive-banner'/>
         <h1>
             <span>We're</span><br />
             coming <br />
@@ -40,7 +43,7 @@ const LeftCol = () => {
         <p>Hello fellow shopers! We're currently building our new <br />fashion store. Add your email below to stay up-to-date with <br /> announcments and launch details.
         </p>
         <Form noValidate onSubmit={formik.handleSubmit}>
-            <Form.Group>
+            <Form.Group className="form-group">
                 <Form.Control
                     className='input'
                     type='email'
@@ -50,6 +53,7 @@ const LeftCol = () => {
                     />
                 <Form.Control.Feedback type='invalid' className='feedback'>
                     {formik.errors.email}
+                    <Image src={errorLogo}/>
                 </Form.Control.Feedback>
             </Form.Group>
             <Button type='submit'>

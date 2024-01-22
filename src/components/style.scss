@@ -1,5 +1,5 @@
-$gradient1:Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
-$gradient2:Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+$gradient1:linear-gradient(135deg,hsl(0, 0%, 100%), hsl(0, 100%, 98%) );
+$gradient2:linear-gradient(135deg,hsl(0, 80%, 86%), hsl(0, 74%, 74%) );
 $desaturatedRed:hsl(0, 36%, 70%);
 $softRed:hsl(0, 93%, 68%);
 $darkGrayishRed: hsl(0, 6%, 24%);
@@ -50,22 +50,55 @@ $darkGrayishRed: hsl(0, 6%, 24%);
         width: 100%!important;
         display: flex;
         align-items: center;
+        position: relative;
 
-        .input{
-            box-shadow: none;
-            width: 100%!important;
+        .form-group{
+            width: 100%;
 
-            &:invalid{
-                border-color: $softRed!important;
+            .input{
+                box-shadow: none;
+                width: 100%!important;
+                padding: 1rem;
+                border-radius: 35px;
+    
+                &:invalid{
+                    border-color: $softRed!important;
+                }
+                
+                
             }
-            
-            
+
+            .feedback{
+                position: absolute!important;
+                color: $softRed;
+                
+                img{
+                    position: absolute;
+                    top: -45px;
+                    right: 75px;
+                }
+            }
+
+        }
+        .form-control.is-invalid, .was-validated .form-control:invalid{
+            background-image:none ;
+        }
+        
+
+        button{
+            padding: 0.7rem 2rem;
+            border-radius: 35px;
+            font-size: 1.5rem;
+            position: absolute;
+            right: -20px;
+            background:$gradient2;
+            border: none;
+
+            &:hover{
+                opacity: 0.5;
+            }
         }
 
-        .feedback{
-            position: absolute!important;
-            color: $softRed;
-        }
     }
 
 }
